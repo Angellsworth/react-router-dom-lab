@@ -1,42 +1,157 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Base reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  /* Light background */
+  color: #004B87;
+  /* Navy text */
+}
+
+/* NavBar */
+nav {
+  background-color: #004B87;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  font-weight: bold;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Headings */
+h1,
+h2 {
   text-align: center;
+  color: #004B87;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Mailbox list */
+ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mail-box {
+  width: 150px;
+  height: 150px;
+  background-color: #ededed;
+  border: 2px solid #d8d8d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #004B87;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.mail-box:hover {
+  background-color: #d8d8d8;
 }
 
-.card {
-  padding: 2em;
+/* Form styles */
+form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
 }
 
-.read-the-docs {
-  color: #888;
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #004B87;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #DA291C;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b22217;
+}
+
+/* Mailbox Grid Layout */
+.mailbox-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+/* Mailbox Card Style */
+.mail-box {
+  width: 180px;
+  height: 160px;
+  background-color: #ededed;
+  border: 2px solid #d8d8d8;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.mail-box:hover {
+  background-color: #d8d8d8;
+  transform: translateY(-4px);
+}
+
+/* Link Styling inside the box */
+.mail-box a {
+  color: #004B87;
+  text-decoration: none;
+  display: block;
+}
+
+.mail-box h3 {
+  color: #b22217;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.mail-box p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
 }
